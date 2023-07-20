@@ -4,88 +4,211 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Comic Years Iframe</title>
-  <style>
-    * {
-      padding: 0;
-      margin: 0;
-    }
-
-    .hidden-scrollbar {
-      scrollbar-width: 0;
-    }
-
-    .hidden-scrollbar::-webkit-scrollbar {
-      width: 0;
-    }
-  </style>
+  
+  <!-- Add this tag to your wordpress header -->
+  <style id="hidden-scrollbar-style"></style>
 </head>
 <body>
   <!-- Basic Style -->
   <p style="text-align: center; padding: 20px 0;">Basic Style</p>
-  <div style="display: flex; justify-content: center;">
-    <iframe src="https://aamhermansyah.github.io/comicyears/Comicyears-300x250/" width="300" height="250" frameborder="0" scrolling="no"></iframe>
+  <div class="basic-300x250">
+    <!-- Iframe will be displayed here -->
   </div>
 
   <br>
 
-  <div style="display: flex; justify-content: center;">
-    <iframe src="https://aamhermansyah.github.io/comicyears/Comicyears-728x90/" width="728" height="90" frameborder="0" scrolling="no"></iframe>
+  <div class="basic-728x90">
+    <!-- Iframe will be displayed here -->
   </div>
 
   <br>
 
-  <div style="display: flex; justify-content: center;">
-    <iframe src="https://aamhermansyah.github.io/comicyears/Comicyears-970x90/" width="970" height="90" frameborder="0" scrolling="no"></iframe>
+  <div class="basic-970x90">
+    <!-- Iframe will be displayed here -->
   </div>
 
   <br>
 
   <!-- Scrollbar -->
   <p style="text-align: center; padding: 20px 0; margin-top: 50px;">Scrollbar Style</p>
-  <div style="display: flex; justify-content: center; overflow-x: auto;">
-    <div style="width: max-content;">
-      <iframe src="https://aamhermansyah.github.io/comicyears/Comicyears-300x250/" width="300" height="250" frameborder="0" scrolling="no"></iframe>
-    </div>
+  <div class="scrollbar-300x250">
+    <!-- Iframe will be displayed here -->
   </div>
 
   <br>
 
-  <div style="display: flex; justify-content: center; overflow-x: auto;">
-    <div style="width: max-content;">
-      <iframe src="https://aamhermansyah.github.io/comicyears/Comicyears-728x90/" width="728" height="90" frameborder="0" scrolling="no"></iframe>
-    </div>
+  <div class="scrollbar-728x90">
+    <!-- Iframe will be displayed here -->
   </div>
 
   <br>
 
-  <div style="display: flex; justify-content: center; overflow-x: auto;">
-    <div style="width: max-content;">
-      <iframe src="https://aamhermansyah.github.io/comicyears/Comicyears-970x90/" width="970" height="90" frameborder="0" scrolling="no"></iframe>
-    </div>
+  <div class="scrollbar-970x90">
+    <!-- Iframe will be displayed here -->
   </div>
 
   <!-- Hidden Scrollbar -->
   <p style="text-align: center; padding: 20px 0; margin-top: 50px;">Hidden Scrollbar Style</p>
-  <div style="display: flex; justify-content: center; overflow-x: scroll;" class="hidden-scrollbar">
-    <div style="width: max-content;">
-      <iframe src="https://aamhermansyah.github.io/comicyears/Comicyears-300x250/" width="300" height="250" frameborder="0" scrolling="no"></iframe>
-    </div>
+  <div class="hidden-scrollbar-300x250">
+    <!-- Iframe will be displayed here -->
   </div>
 
   <br>
+
+  <div class="hidden-scrollbar-728x90">
+    <!-- Iframe will be displayed here -->
+  </div>
+
+  <br>
+
+  <div class="hidden-scrollbar-970x90">
+    <!-- Iframe will be displayed here -->
+  </div>
+
+  <!-- Initial script for hidden scrollbar stye -->
+  <script>
+    // Ambil elemen style dengan ID yang telah ditentukan sebelumnya
+    const customStyleTag = document.getElementById('hidden-scrollbar-style');
   
-  <div style="display: flex; justify-content: center; overflow-x: scroll;" class="hidden-scrollbar">
-    <div style="width: max-content;">
-      <iframe src="https://aamhermansyah.github.io/comicyears/Comicyears-728x90/" width="728" height="90" frameborder="0" scrolling="no"></iframe>
-    </div>
-  </div>
+    // Tambahkan aturan gaya ::-webkit-scrollbar ke dalam elemen style
+    customStyleTag.textContent = `
+      .hidden-scrollbar {
+        scrollbar-width: 0;
+      }
 
-  <br>
+      .hidden-scrollbar::-webkit-scrollbar {
+        width: 0;
+      }
+    `;
+  </script>
+  
+  <!-- Basic Style - 300 x 250 banner -->
+  <script>
+    // Note: You can modify the "class" section in this part according to what is available in your WordPress.
+    // Please use unique class name, you can add in wordpress editor for the custom class
+    var parentElement = document.querySelector('.basic-300x250');
 
-  <div style="display: flex; justify-content: center; overflow-x: scroll;" class="hidden-scrollbar">
-    <div style="width: max-content;">
-      <iframe src="https://aamhermansyah.github.io/comicyears/Comicyears-970x90/" width="970" height="90" frameborder="0" scrolling="no"></iframe>
-    </div>
-  </div>
+    parentElement.innerHTML = `
+      <div style="display: flex; justify-content: center;">
+        <iframe src="https://aamhermansyah.github.io/comicyears/Comicyears-300x250/" width="300" height="250" frameborder="0" scrolling="no"></iframe>
+      </div>
+    `;
+  </script>
+
+  <!-- Basic Style - 728 x 90 banner -->
+  <script>
+    // Note: You can modify the "class" section in this part according to what is available in your WordPress.
+    // Please use unique class name, you can add in wordpress editor for the custom class
+    var parentElement = document.querySelector('.basic-728x90');
+
+    parentElement.innerHTML = `
+      <div style="display: flex; justify-content: center;">
+        <iframe src="https://aamhermansyah.github.io/comicyears/Comicyears-728x90/" width="728" height="90" frameborder="0" scrolling="no"></iframe>
+      </div>
+    `;
+  </script>
+
+  <!-- Basic Style - 970 x 90 banner -->
+  <script>
+    // Note: You can modify the "class" section in this part according to what is available in your WordPress.
+    // Please use unique class name, you can add in wordpress editor for the custom class
+    var parentElement = document.querySelector('.basic-970x90');
+
+    parentElement.innerHTML = `
+      <div style="display: flex; justify-content: center;">
+        <iframe src="https://aamhermansyah.github.io/comicyears/Comicyears-970x90/" width="970" height="90" frameborder="0" scrolling="no"></iframe>
+      </div>
+    `;
+  </script>
+
+  <!-- Scrollbar Style - 300 x 250 banner -->
+  <script>
+    // Note: You can modify the "class" section in this part according to what is available in your WordPress.
+    // Please use unique class name, you can add in wordpress editor for the custom class
+    var parentElement = document.querySelector('.scrollbar-300x250');
+
+    parentElement.innerHTML = `
+      <div style="display: flex; justify-content: center; overflow-x: auto;">
+        <div style="width: max-content;">
+          <iframe src="https://aamhermansyah.github.io/comicyears/Comicyears-300x250/" width="300" height="250" frameborder="0" scrolling="no"></iframe>
+        </div>
+      </div>
+    `;
+  </script>
+
+  <!-- Scrollbar Style - 728 x 90 banner -->
+  <script>
+    // Note: You can modify the "class" section in this part according to what is available in your WordPress.
+    // Please use unique class name, you can add in wordpress editor for the custom class
+    var parentElement = document.querySelector('.scrollbar-728x90');
+
+    parentElement.innerHTML = `
+      <div style="display: flex; justify-content: center; overflow-x: auto;">
+        <div style="width: max-content;">
+          <iframe src="https://aamhermansyah.github.io/comicyears/Comicyears-728x90/" width="728" height="90" frameborder="0" scrolling="no"></iframe>
+        </div>
+      </div>
+    `;
+  </script>
+
+  <!-- Scrollbar Style - 970 x 90 banner -->
+  <script>
+    // Note: You can modify the "class" section in this part according to what is available in your WordPress.
+    // Please use unique class name, you can add in wordpress editor for the custom class
+    var parentElement = document.querySelector('.scrollbar-970x90');
+
+    parentElement.innerHTML = `
+      <div style="display: flex; justify-content: center; overflow-x: auto;">
+        <div style="width: max-content;">
+          <iframe src="https://aamhermansyah.github.io/comicyears/Comicyears-970x90/" width="970" height="90" frameborder="0" scrolling="no"></iframe>
+        </div>
+      </div>
+    `;
+  </script>
+
+  <!-- Hidden Scrollbar Style - 300 x 250 banner -->
+  <script>
+    // Note: You can modify the "class" section in this part according to what is available in your WordPress.
+    // Please use unique class name, you can add in wordpress editor for the custom class
+    var parentElement = document.querySelector('.hidden-scrollbar-300x250');
+
+    parentElement.innerHTML = `
+      <div style="display: flex; justify-content: center; overflow-x: scroll;" class="hidden-scrollbar">
+        <div style="width: max-content;">
+          <iframe src="https://aamhermansyah.github.io/comicyears/Comicyears-300x250/" width="300" height="250" frameborder="0" scrolling="no"></iframe>
+        </div>
+      </div>
+    `;
+  </script>
+
+  <!-- Hidden Scrollbar Style - 728 x 90 banner -->
+  <script>
+    // Note: You can modify the "class" section in this part according to what is available in your WordPress.
+    // Please use unique class name, you can add in wordpress editor for the custom class
+    var parentElement = document.querySelector('.hidden-scrollbar-728x90');
+
+    parentElement.innerHTML = `
+      <div style="display: flex; justify-content: center; overflow-x: scroll;" class="hidden-scrollbar">
+        <div style="width: max-content;">
+          <iframe src="https://aamhermansyah.github.io/comicyears/Comicyears-728x90/" width="728" height="90" frameborder="0" scrolling="no"></iframe>
+        </div>
+      </div>
+    `;
+  </script>
+
+  <!-- Hidden Scrollbar Style - 970 x 90 banner -->
+  <script>
+    // Note: You can modify the "class" section in this part according to what is available in your WordPress.
+    // Please use unique class name, you can add in wordpress editor for the custom class
+    var parentElement = document.querySelector('.hidden-scrollbar-970x90');
+
+    parentElement.innerHTML = `
+      <div style="display: flex; justify-content: center; overflow-x: scroll;" class="hidden-scrollbar">
+        <div style="width: max-content;">
+          <iframe src="https://aamhermansyah.github.io/comicyears/Comicyears-970x90/" width="970" height="90" frameborder="0" scrolling="no"></iframe>
+        </div>
+      </div>
+    `;
+  </script>
 </body>
 </html>
